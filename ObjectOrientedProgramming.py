@@ -1,36 +1,28 @@
-# pypi
 
-# TODO : Class Turtle
+from turtle import Turtle, Screen             # turtle is the module; Turtle and Screen are classes
+from prettytable import PrettyTable
 
-# from turtle import Turtle, Screen             # turtle is the module; Turtle and Screen are classes
-#
-# timmy = Turtle()                              # timmy is an object created from class Turtle
-# print(timmy)
-# timmy.shape("turtle")                         # shape is a method(function otherwise) of object timmy
-# timmy.color("coral")                          # color is a method(function otherwise) of object timmy
-# timmy.forward(100)
-#
-# my_screen = Screen()                          # my_screen is an object created from class Screen
-# print(my_screen.canvheight)                   # canvheight is an attribute(variable otherwise) of object my_screen
-# my_screen.exitonclick()                       # exitonclick is a method(function otherwise) of object my_screen
+timmy = Turtle()                              # timmy is an object created from class Turtle
+print(timmy)
+timmy.shape("turtle")                         # shape is a method(function otherwise) of object timmy
+timmy.color("coral")                          # color is a method(function otherwise) of object timmy
+timmy.forward(100)
 
+my_screen = Screen()                          # my_screen is an object created from class Screen
+print(my_screen.canvheight)                   # canvheight is an attribute(variable otherwise) of object my_screen
+my_screen.exitonclick()                       # exitonclick is a method(function otherwise) of object my_screen
 
-# TODO : Class PrettyTable
-#
-# from prettytable import PrettyTable
-# table = PrettyTable()
-# table.add_column("Pokemon Name", ["Pikachu", "Squirtle", "Charmader"])
-# table.add_column("Type", ["Electric", "Water", "Fire"])
-# table.align = 'l'
-# print(table)
+table = PrettyTable()
+table.add_column("Pokemon Name", ["Pikachu", "Squirtle", "Charmader"])
+table.add_column("Type", ["Electric", "Water", "Fire"])
+table.align = 'l'
+print(table)
 
-
-# TODO : creation of class, its attributes and methods
 
 class User:
     
-    def __init__(self, id, name):
-        self.user_id = id
+    def __init__(self, userid, name):
+        self.user_id = userid
         self.user_name = name
         self.followers = 0
         self.following = 0
@@ -47,5 +39,3 @@ user1.follow(user2)
 
 print(user1.followers, user1.following)
 print(user2.followers, user2.following)
-
-
